@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataBaseConnection
 {
-    class API
+    public class API
     {
         public static List<Movie> GetMovieSlice(int a, int b)
         {

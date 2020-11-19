@@ -4,7 +4,6 @@ using System.Text;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace DataBaseConnection
 {
     class Seeding
