@@ -5,30 +5,36 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataBaseConnection
 {
-    public class API
+    public static class API
     {
-        public static List<Movie> GetMovieSlice(int a, int b)
+        static Context ctx;
+
+        static API()
         {
-            using var ctx = new Context();
-            return ctx.Movies.OrderBy(m => m.Title).Skip(a).Take(b).ToList();
+            ctx = new Context();
+        }
+        public static List<Movie>GetMovieSlice(int skip_x, int take_x)
+        {
+            return ctx.Movies
+                .OrderBy(m => m.Title)
+                .Skip(skip_x)
+                .Take(take_x)
+                .ToList(); 
         }
         public static Customer GetCustomerByName(string name)
         {
-            using var ctx = new Context();
-            return ctx.Customers.FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
+            return ctx.Customers
+                .FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
         }
         public static bool RegisterSale(Customer customer, Movie movie)
         {
-            using var ctx = new Context();
             try
             {
-                ctx.Entry(customer).State = EntityState.Unchanged;
-                ctx.Entry(movie).State = EntityState.Unchanged;
-
                 ctx.Add(new Rental() { Date = DateTime.Now, Customer = customer, Movie = movie });
-                return ctx.SaveChanges() == 1;
+                bool one_record_added = ctx.SaveChanges() == 1;
+                return one_record_added;
             }
-            catch (DbUpdateException e)
+            catch(DbUpdateException e)
             {
                 System.Diagnostics.Debug.WriteLine(e.Message);
                 System.Diagnostics.Debug.WriteLine(e.InnerException.Message);
