@@ -17,9 +17,21 @@ namespace DataBaseConnection
                 ctx.RemoveRange(ctx.Customers);
 
                 ctx.AddRange(new List<Customer> {
-                    new Customer { Name = "Alan" },
-                    new Customer { Name = "Svante" },
-                    new Customer { Name = "Marcus" },
+                    new Customer { Name = "Alan Weik", Email = "AlanWeik@gmail.com" },
+                    new Customer { Name = "Svante Pålsson", Email = "SvantePålsson@gmail.com" },
+                    new Customer { Name = "Marcus Häst", Email = "Marcus@gmail.com" },
+                    new Customer { Name = "Peter Svensson", Email = "PeterS@gmail.com" }, 
+                    new Customer { Name = "Tony Makaroni", Email = "Tony@gmail.com" },
+                    new Customer { Name = "Gustav Marklund", Email = "Gurra@gmail.com" },
+                    new Customer { Name = "Mark Gustavsson", Email = "MarkG@gmail.com" },
+                    new Customer { Name = "Lisa Field", Email = "LisaF@gmail.com" }, 
+                    new Customer { Name = "Alma Svensson", Email = "Alma@gmail.com" },
+                    new Customer { Name = "Fanny Wihlborg", Email = "Fanny@gmail.com" },
+                    new Customer { Name = "Lina Lindberg", Email = "Lina@gmail.com" }, 
+                    new Customer { Name = "Stina Elvland", Email = "Stina@hotmail.com" }, 
+                    new Customer { Name = "Alice Eklund", Email = "Alice@hotmail.com" },
+                    new Customer { Name = "Saga Eklund", Email = "Saga@hotmail.com" },
+
                 });
 
                 var movies = new List<Movie>();

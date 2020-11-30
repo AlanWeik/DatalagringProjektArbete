@@ -8,12 +8,14 @@ namespace DataBaseConnection
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Email { get; set; }
         public virtual List<Rental> Sales { get; set; }
     }
     public class Movie
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Genre { get; set; }
         public string ImageURL { get; set; }
         public virtual List<Rental> Sales { get; set; }
     }
