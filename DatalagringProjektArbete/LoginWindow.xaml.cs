@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataBaseConnection;
 
 namespace Store
 {
@@ -20,6 +21,21 @@ namespace Store
         public LoginWindow()
         {
             InitializeComponent();
+        }
+
+        private void LogInClick(object sender, RoutedEventArgs e)
+        {
+            State.User = API.GetCustomerByName(NameField.Text.Trim());
+            if (State.User != null)
+            {
+                var next_window = new MainWindow();
+                next_window.Show();
+                this.Close();
+            }
+            else
+            {
+                NameField.Text = "...";
+            }
         }
     }
 }
