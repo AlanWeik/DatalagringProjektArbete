@@ -10,6 +10,7 @@ namespace DataBaseConnection
         public string Name { get; set; }
         public string Email { get; set; }
         public virtual List<Rental> Sales { get; set; }
+
     }
     public class Movie
     {
