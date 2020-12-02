@@ -21,5 +21,10 @@ namespace Store
         {
             InitializeComponent();
         }
+
+        private void ReturnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

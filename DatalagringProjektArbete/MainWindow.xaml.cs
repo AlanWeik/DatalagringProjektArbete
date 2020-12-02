@@ -105,6 +105,19 @@ namespace Store
                 MessageBox.Show("Error occured while purchase was made.. Please try again later mate!", "Purchase failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
+
+        private void LoggOuteClick(object sender, RoutedEventArgs e)
+        {
+            var BackToLogin = new LoginWindow();
+            {
+                InitializeComponent();
+            }
+        }
+
+        private void profileClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
