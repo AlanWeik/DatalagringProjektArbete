@@ -11,17 +11,17 @@
             <TransformGroup>
                 <ScaleTransform/>
                 <SkewTransform/>
-                <RotateTransform Angle="-0.06"/>
+                <RotateTransform Angle="0.061"/>
                 <TranslateTransform/>
             </TransformGroup>
         </ScrollViewer.RenderTransform>
-        <Grid Name="MovieGrid" Background="IndianRed" ShowGridLines="True" Width="600" RenderTransformOrigin="0.500,0.500" Height="440">
+        <Grid Name="MovieGrid" Background="IndianRed" ShowGridLines="True" Width="598" RenderTransformOrigin="0.5,0.5" Height="439">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform X="22.459" Y="-4.822"/>
+                    <RotateTransform Angle="0.019"/>
+                    <TranslateTransform X="22.407" Y="-4.864"/>
                 </TransformGroup>
             </Grid.RenderTransform>
             <!-- Tre rader där filmtexten kommer att dyka upp i MainWindow-->
@@ -32,11 +32,13 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="225*"/>
-                <RowDefinition Height="209*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="214*"/>
+                <RowDefinition Height="219*"/>
+                <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
-            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" Margin="-93,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28"/>
-            <Button Click="LoggOuteClick" Content="Log out" HorizontalAlignment="Left" Margin="-93,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28"/>
+            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" Margin="-93,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Grid.Row="1"/>
+            <Button Click="LoggOuteClick" Content="Log out" HorizontalAlignment="Left" Margin="-93,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Grid.Row="1"/>
         </Grid>
     </ScrollViewer>
 
