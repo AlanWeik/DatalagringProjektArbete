@@ -12,9 +12,10 @@ namespace DataBaseConnection
         {
             using (var ctx = new Context())
             {
+                ctx.RemoveRange(ctx.Customers);
                 ctx.RemoveRange(ctx.Sales);
                 ctx.RemoveRange(ctx.Movies);
-                ctx.RemoveRange(ctx.Customers);
+
 
                 ctx.AddRange(new List<Customer> {
                     new Customer { Name = "Alan Weik", Email = "AlanWeik@gmail.com" },
