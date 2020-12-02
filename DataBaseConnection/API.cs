@@ -24,7 +24,7 @@ namespace DataBaseConnection
         public static Customer GetCustomerByName(string name)
         {
             return ctx.Customers
-                .FirstOrDefault(c => c.Firstname.ToLower() == name.ToLower());
+                .FirstOrDefault(c => c.Username.ToLower() == name.ToLower());
             // Snacka om att använda username istället för Fname och Lname. 
         }
         public static bool RegisterSale(Customer customer, Movie movie)
