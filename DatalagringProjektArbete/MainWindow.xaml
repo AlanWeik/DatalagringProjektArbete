@@ -7,12 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="2,0,-2,0">
-        <Button Name="btn" Background="DarkRed" 
-        Click="ChangeBackground">
-            Background
-        </Button>
-        <Button Click="UserProfile" Content="User Profile" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
-        <Button Click="Movies" Content="Movies" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
-        <Button Click="Exit" Content="Exit" HorizontalAlignment="Center" Margin="0,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
+        <Button Click="UserProfile" Content="User Profile" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
+        <Button Click="Exit" Content="Exit" HorizontalAlignment="Left" Margin="626,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
     </Grid>
 </Window>
