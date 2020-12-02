@@ -6,8 +6,17 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="2,0,-2,0">
-        <Button Click="UserProfile" Content="User Profile" HorizontalAlignment="Left" Margin="626,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
-        <Button Click="Exit" Content="Exit" HorizontalAlignment="Left" Margin="626,373,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Height="51" Width="164"/>
-    </Grid>
+    <ScrollViewer>
+        <Grid Name="MovieGrid" Background="Aqua" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+            </Grid.RowDefinitions>
+        </Grid>
+    </ScrollViewer>
 </Window>
