@@ -35,7 +35,7 @@ namespace Store
 
             for (int y = 0; y < row_count; y++)
             { //Bestämmer hur hög raden skall vara i förhållande till applikationens fönster.
-                Movie.RowDefinitions.Add(new RowDefinition()
+                MovieGrid.RowDefinitions.Add(new RowDefinition()
                 {
                     Height = new GridLength(140, GridUnitType.Pixel)
                 });
@@ -43,7 +43,7 @@ namespace Store
                 for (int x = 0; x < column_count; x++)
                 {
                     //Räknar ut vilken film som skall skrivas ut efter X och Y kordinater.
-                    int i = y * column_count; + x;
+                    int i = y * column_count + x;
                     //Kollar så att vi inte försöker fylla mer Grid celler än vi har filmrecords.
                     if (i < State.Movies.Count)
                     {
