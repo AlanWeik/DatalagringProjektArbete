@@ -16,7 +16,7 @@ namespace DataBaseConnection
                 .UseLazyLoadingProxies()
                 .UseSqlServer(
                 @"server=.\SQLExpress;" +
-                @"database=SaleDataBase;" +
+                @"database=DataLagringProjektArbete;" +
                 @"trusted_connection=true;" +
                 @"MultipleActiveResultSets=True"
                 );
