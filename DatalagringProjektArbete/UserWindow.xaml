@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Click="LogInClick" Content="Return" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Height="43" Width="334" RenderTransformOrigin="0.495,0.578"/>
+        <TextBox Name="NameField" HorizontalAlignment="Left" Margin="233,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
     </Grid>
 </Window>

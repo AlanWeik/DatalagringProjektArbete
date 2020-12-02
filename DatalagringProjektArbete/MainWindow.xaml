@@ -6,17 +6,40 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <ScrollViewer>
-        <Grid Name="MovieGrid" Background="Aqua" ShowGridLines="True">
+    <ScrollViewer RenderTransformOrigin="0.5,0.5">
+        <ScrollViewer.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.208"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </ScrollViewer.RenderTransform>
+        <Grid Name="MovieGrid" Background="IndianRed" ShowGridLines="True" Width="598" RenderTransformOrigin="0.486,0.523" Height="428">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.29"/>
+                    <TranslateTransform X="22.459" Y="-4.822"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <!-- Tre rader där filmtexten kommer att dyka upp i MainWindow-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="225*"/>
+                <RowDefinition Height="209*"/>
             </Grid.RowDefinitions>
+            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" Margin="-93,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28"/>
+            <Button Click="LoggOuteClick" Content="Log out" HorizontalAlignment="Left" Margin="-93,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28"/>
         </Grid>
     </ScrollViewer>
+
+
+
 </Window>
+
