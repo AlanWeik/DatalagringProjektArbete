@@ -24,7 +24,28 @@ namespace DataBaseConnection
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Customer>().HasData(new Customer
+            {
+                Id = 1,
+                Firstname = "Alan",
+                Lastname = "Weik",
+                Age = 12,
+                Email = "AlanWeik@gmail.com"
+            });
 
+            modelBuilder.Entity<Movie>().HasData(new Movie
+            {
+                Id = 1,
+                Title = "Lord of the rings ",
+                Genre = "Fantasy",
+                ImageURL = ""
+            });
+
+            modelBuilder.Entity<Rental>().HasData(new Rental
+            {
+                Id = 1,
+                Date = DateTime.Now
+            });
         }
     }
 }
