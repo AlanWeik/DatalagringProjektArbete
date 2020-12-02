@@ -108,10 +108,7 @@ namespace Store
 
         private void LoggOuteClick(object sender, RoutedEventArgs e)
         {
-            var BackToLogin = new LoginWindow();
-            {
-                InitializeComponent();
-            }
+            var loginwindow = new LoginWindow();
         }
 
         private void profileClick(object sender, RoutedEventArgs e)
