@@ -53,11 +53,28 @@ namespace DataBaseConnection
                 ctx.SaveChanges();
             }
 
-            using (var ctx = new Context())
+            using (var ctx = new Context()) //Skapar table för Movie tabellen
             {
                 ctx.RemoveRange(ctx.Customers);
                 ctx.RemoveRange(ctx.Sales);
                 ctx.RemoveRange(ctx.Movies);
+
+                ctx.AddRange(new List<Movie> {
+                    new Movie {Title = "abc" , Genre = "hej", ImageURL = "bildfitta"}
+         
+                });
+            }
+
+            using (var ctx = new Context()) //Skapar table för rental tabellen
+            {
+                ctx.RemoveRange(ctx.Customers);
+                ctx.RemoveRange(ctx.Sales);
+                ctx.RemoveRange(ctx.Movies);
+
+                ctx.AddRange(new List<Rental> {
+                    new Rental {Date = DateTime.Now}
+
+                });
             }
         }
     }
