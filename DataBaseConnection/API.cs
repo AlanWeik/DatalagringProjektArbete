@@ -27,6 +27,12 @@ namespace DataBaseConnection
                 .FirstOrDefault(c => c.Username.ToLower() == name.ToLower());
             // Snacka om att använda username istället för Fname och Lname. 
         }
+
+        public static Movie SearchMovie(string movie)
+        {
+            return ctx.Movies
+               .FirstOrDefault(ctx => ctx.Title.ToLower() == movie.ToLower());
+        }
         public static bool RegisterSale(Customer customer, Movie movie)
         {
             try

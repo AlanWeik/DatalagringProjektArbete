@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="820">
     <ScrollViewer>
-        <Grid Name="MovieGrid" Background="Black" ShowGridLines="True" Width="615">
+        <Grid Name="MovieGrid" Background="Black" ShowGridLines="True" Width="605">
 
             <Grid.ColumnDefinitions>
                 <!-- Tre rader där filmtexten kommer att dyka upp i MainWindow-->
@@ -19,12 +19,18 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="142.776"/>
+                <RowDefinition Height="143*"/>
+                <RowDefinition Height="143*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid>
-                <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Margin="-82,3,0,0"/>
-                <Button Click="LoggOuteClick" Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Margin="-82,80,0,0"/>
-                <Button Click="BrowsMovie" Content="Search Movie" HorizontalAlignment="Left" Margin="-82,41,0,0" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" VerticalAlignment="Top"/>
-            </Grid>
+
+            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Margin="-89,6,0,0"/>
+            <Button Click="LoggOuteClick" Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Margin="-89,83,0,0"/>
+            <Button Click="BrowsMovie" Content="Search Movie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-89,44,0,0" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28"/>
 
 
         </Grid>
