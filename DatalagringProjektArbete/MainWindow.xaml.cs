@@ -129,18 +129,7 @@ namespace Store
                 OpenSearchWindow.Show();
                 this.Close();
             }
-            
-            State.Movies = API.SearchMovie(NameField.Text.Trim());
-            if (State.Movies != null)
-            {
-                var next_window = new MainWindow();
-                next_window.Show();
-                this.Close();
-            }
-            else
-            {
-                NameField.Text = "...";
-            }
+
         }
     }
 }

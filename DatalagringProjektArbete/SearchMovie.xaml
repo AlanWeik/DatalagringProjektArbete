@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="SearchMovie" Height="450" Width="800">
     <Grid>
-        
+        <TextBox Name="SearchMovieField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="SearchField_TextChanged"/>
+        <Button Click="SearchButton" Content="Search" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Click="BackButton" Content="Back" HorizontalAlignment="Center" Margin="0,265,0,0" VerticalAlignment="Top" Width="70"/>
+
     </Grid>
 </Window>

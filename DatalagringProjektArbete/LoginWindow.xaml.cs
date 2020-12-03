@@ -37,5 +37,6 @@ namespace Store
                 NameField.Text = "...";
             }
         }
+
     }
 }

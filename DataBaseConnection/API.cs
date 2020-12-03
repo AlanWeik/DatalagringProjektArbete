@@ -28,10 +28,10 @@ namespace DataBaseConnection
             // Snacka om att använda username istället för Fname och Lname. 
         }
 
-        public static Movie SearchMovie(string movie)
+        public static Movie SearchMovie(string Title)
         {
             return ctx.Movies
-               .FirstOrDefault(ctx => ctx.Title.ToLower() == movie.ToLower());
+               .FirstOrDefault(c => c.Title.ToLower() == Title.ToLower());
         }
         public static bool RegisterSale(Customer customer, Movie movie)
         {

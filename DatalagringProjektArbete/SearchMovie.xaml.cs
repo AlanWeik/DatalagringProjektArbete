@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataBaseConnection;
 
 namespace Store
 {
@@ -20,6 +21,29 @@ namespace Store
         public SearchMovie()
         {
             InitializeComponent();
+        }
+
+        private void SearchButton(object sender, RoutedEventArgs e)
+        {
+            State.Pick = API.SearchMovie(SearchMovieField.Text.Trim());
+            if (State.Pick != null)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Failed, venture outdoors until fixed.");
+            }
+
+        }
+
+        private void BackButton(object sender, RoutedEventArgs e)
+        {
+            var BackToMain = new MainWindow();
+            {
+                BackToMain.Show();
+                this.Close();
+            }
         }
     }
 }
