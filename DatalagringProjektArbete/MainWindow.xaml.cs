@@ -124,7 +124,11 @@ namespace Store
 
         private void BrowsMovie(object sender, RoutedEventArgs e)
         {
-
+            var OpenSearchWindow = new SearchMovie();
+            {
+                OpenSearchWindow.Show();
+                this.Close();
+            }
             
             State.Movies = API.SearchMovie(NameField.Text.Trim());
             if (State.Movies != null)
