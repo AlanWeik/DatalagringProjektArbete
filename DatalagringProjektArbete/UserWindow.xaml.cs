@@ -22,9 +22,13 @@ namespace Store
             InitializeComponent();
         }
 
-        private void ReturnClick(object sender, RoutedEventArgs e)
+        private void ReturnClick(object sender, RoutedEventArgs e) // Return to MainWindow.
         {
-
+            var BackToMainWindow = new MainWindow();
+            {
+                BackToMainWindow.Show();
+                this.Close();
+            }
         }
     }
 }
