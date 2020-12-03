@@ -52,6 +52,13 @@ namespace DataBaseConnection
 
                 ctx.SaveChanges();
             }
+
+            using (var ctx = new Context())
+            {
+                ctx.RemoveRange(ctx.Customers);
+                ctx.RemoveRange(ctx.Sales);
+                ctx.RemoveRange(ctx.Movies);
+            }
         }
     }
 }

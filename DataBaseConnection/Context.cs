@@ -38,13 +38,14 @@ namespace DataBaseConnection
                 Id = 1,
                 Title = "Lord of the rings ",
                 Genre = "Fantasy",
-                ImageURL = ""
-            });
+                ImageURL = (@"..\..\..\SeedData\MovieGenre.csv")
+                
+        });
 
             modelBuilder.Entity<Rental>().HasData(new Rental
             {
                 Id = 1,
-                Date = DateTime.Now
+                Date = DateTime.Now,
             });
         }
     }

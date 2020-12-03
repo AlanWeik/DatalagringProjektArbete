@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <ScrollViewer RenderTransformOrigin="0.0,0.0" Margin="0,0,0,0">
+    <ScrollViewer RenderTransformOrigin="0.0,0.0" Margin="-46,0,0,-1">
         <ScrollViewer.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -15,12 +15,12 @@
                 <TranslateTransform/>
             </TransformGroup>
         </ScrollViewer.RenderTransform>
-        <Grid Name="MovieGrid" Background="IndianRed" ShowGridLines="True" Width="598" RenderTransformOrigin="0.5,0.5" Height="439">
+        <Grid Name="MovieGrid" Background="Black" ShowGridLines="True" Width="771" RenderTransformOrigin="0.5,0.5" Height="437">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="0.019"/>
+                    <RotateTransform Angle="0.0"/>
                     <TranslateTransform X="22.407" Y="-4.864"/>
                 </TransformGroup>
             </Grid.RenderTransform>
@@ -32,13 +32,15 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="6*"/>
-                <RowDefinition Height="214*"/>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="218*"/>
                 <RowDefinition Height="219*"/>
                 <RowDefinition Height="0*"/>
+                <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
-            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" Margin="-93,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Grid.Row="1"/>
-            <Button Click="LoggOuteClick" Content="Log out" HorizontalAlignment="Left" Margin="-93,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Grid.Row="1"/>
+            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" Margin="17,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Grid.Row="1"/>
+            <Button Click="LoggOuteClick" Content="Log out" HorizontalAlignment="Left" Margin="16,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Grid.Row="1"/>
+            <Button Click="BrowsMovie" Content="Brows movie" HorizontalAlignment="Left" Margin="16,111,0,0" RenderTransformOrigin="0.887,-1.015" Width="81" Grid.Row="1" Height="28" VerticalAlignment="Top"/>
         </Grid>
     </ScrollViewer>
 

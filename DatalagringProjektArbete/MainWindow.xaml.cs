@@ -26,7 +26,7 @@ namespace Store
             InitializeComponent();
 
             int movie_skip_count = 0;
-            int movie_take_count = 30;
+            int movie_take_count = 10; //Visar antalet filmer
             State.Movies = API.GetMovieSlice(movie_skip_count, movie_take_count);
 
             int column_count = MovieGrid.ColumnDefinitions.Count;
