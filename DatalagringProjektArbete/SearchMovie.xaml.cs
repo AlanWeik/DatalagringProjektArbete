@@ -45,5 +45,10 @@ namespace Store
                 this.Close();
             }
         }
+
+        private void SearchField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

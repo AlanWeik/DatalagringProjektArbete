@@ -38,5 +38,9 @@ namespace Store
             }
         }
 
+        private void NameField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
