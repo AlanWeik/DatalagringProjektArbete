@@ -10,6 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DataBaseConnection;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Navigation;
 
 namespace Store
 {
@@ -38,9 +41,5 @@ namespace Store
             }
         }
 
-        private void NameField_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
