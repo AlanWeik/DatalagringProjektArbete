@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
     <Grid>
-        <Button Click="ReturnClick" Content="Return" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Height="43" Width="334" RenderTransformOrigin="0.495,0.578"/>
-        <TextBox Name="NameField" HorizontalAlignment="Left" Margin="233,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Button Click="ReturnClick" Content="Return" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Height="43" Width="334" RenderTransformOrigin="0.495,0.578"/>
+        <TextBox Name="NameField" HorizontalAlignment="Left" Margin="233,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Text="Name: "/>
+        <TextBox x:Name="NameField_Copy" HorizontalAlignment="Left" Margin="233,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Text="Name: "/>
+        <TextBox x:Name="NameField_Copy1" HorizontalAlignment="Left" Margin="233,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Text="Email: "/>
     </Grid>
 </Window>

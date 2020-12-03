@@ -109,9 +109,16 @@ namespace Store
         private void LoggOuteClick(object sender, RoutedEventArgs e)
         {
             var loginwindow = new LoginWindow();
+            loginwindow.Show();
+            this.Close();
         }
 
         private void profileClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BrowsMovie(object sender, RoutedEventArgs e)
         {
 
         }

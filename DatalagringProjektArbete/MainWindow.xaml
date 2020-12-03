@@ -6,32 +6,17 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <ScrollViewer RenderTransformOrigin="0.0,0.0" Margin="-46,0,0,-1">
-        <ScrollViewer.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.061"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </ScrollViewer.RenderTransform>
-        <Grid Name="MovieGrid" Background="Black" ShowGridLines="True" Width="771" RenderTransformOrigin="0.5,0.5" Height="437">
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.0"/>
-                    <TranslateTransform X="22.407" Y="-4.864"/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <!-- Tre rader där filmtexten kommer att dyka upp i MainWindow-->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+    <ScrollViewer>
+        <Grid Name="MovieGrid" Background="Black" ShowGridLines="True">
             </Grid.ColumnDefinitions>
+            <!-- Tre rader där filmtexten kommer att dyka upp i MainWindow-->
+            <Grid.ColumnDefinitions/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="0*"/>
                 <RowDefinition Height="218*"/>
