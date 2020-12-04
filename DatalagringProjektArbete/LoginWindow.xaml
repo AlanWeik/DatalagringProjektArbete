@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Username" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="NameField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-        <Button Click="LogInClick" Content="Log In" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top"/>
+        <Label Content="Username" FontSize="30" HorizontalAlignment="Center" Margin="0,155,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="SearchUserField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+        <Button Click="LogInClick" Content="Log In" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="126"/>
     </Grid>
 </Window>

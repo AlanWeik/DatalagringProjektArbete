@@ -24,11 +24,28 @@ namespace Store
         public LoginWindow()
         {
             InitializeComponent();
+            this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
         }
-
+        public void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                State.User = API.GetCustomerByName(SearchUserField.Text.Trim());
+                if (State.User != null)
+                {
+                    var next_window = new MainWindow();
+                    next_window.Show();
+                    this.Close();
+                }
+                else
+                {
+                    SearchUserField.Text = "...";
+                }
+            }
+        }
         private void LogInClick(object sender, RoutedEventArgs e)
         {
-            State.User = API.GetCustomerByName(NameField.Text.Trim());
+            State.User = API.GetCustomerByName(SearchUserField.Text.Trim());
             if (State.User != null)
             {
                 var next_window = new MainWindow();
@@ -37,7 +54,7 @@ namespace Store
             }
             else
             {
-                NameField.Text = "...";
+                SearchUserField.Text = "...";
             }
         }
 

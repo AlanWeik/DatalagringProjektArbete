@@ -142,7 +142,9 @@ namespace Store
 
         private void BackButton(object sender, RoutedEventArgs e)
         {
-
+            var BackToMain = new MainWindow();
+            BackToMain.Show();
+            this.Close();
         }
     }
 }
