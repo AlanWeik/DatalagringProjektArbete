@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="ChangeUserName" Height="450" Width="800" WindowStartupLocation="CenterScreen" Foreground="White" Background="Black">
     <Grid>
-        <Label Content="Old Username" HorizontalAlignment="Center" Margin="0,143,0,0" VerticalAlignment="Top" Width="212" Foreground="White"/>
-        <Label Content="New Username" HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Width="212" Foreground="White" />
-        <TextBox Name="OldUserName" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="392,147,0,0" Width="147"/>
-        <TextBox Name="NewUserName" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="392,170,0,0" Width="147"/>
-        <Button Content="Change" Click="ChangeUserNameButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="392,192,0,0" Height="22" Width="76"/>
-        <Button Content="Back" Click="BackToMainButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Width="66" Margin="473,192,0,0"/>
+        <Label Content="Old Username" HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" Width="212" Background="White"/>
+        <Label Content="New Username" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top" Width="212" Background="White" />
+        <Button Content="Change Username" Click="ChangeUserNameButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="294,201,0,0" Height="22" Width="141"/>
+        <Button Content="Back" Click="BackToMainButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Width="66" Margin="440,201,0,0"/>
     </Grid>
 </Window>
