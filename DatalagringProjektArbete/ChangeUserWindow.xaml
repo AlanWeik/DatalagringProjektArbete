@@ -9,8 +9,8 @@
     <Grid>
         <Label Content="Old Username" HorizontalAlignment="Left" Margin="308,138,0,0" VerticalAlignment="Top" Width="212" Foreground="White"/>
         <Label Content="New Username" HorizontalAlignment="Left" Margin="308,166,0,0" VerticalAlignment="Top" Width="212" Foreground="White" />
-        <TextBox Margin="400,168,243,244"/>
-        <TextBox Margin="400,140,243,273"/>
+        <TextBox Name="OldUsername" Margin="400,168,243,244"/>
+        <TextBox Name="NewUserName" Margin="400,140,243,273"/>
         <Button Content="Change" Click="ChangeUserNameButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,197,0,0" Height="22" Width="79"/>
         <Button Content="Back" Click="BackToMainButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Width="73" Margin="484,197,0,0"/>
     </Grid>
