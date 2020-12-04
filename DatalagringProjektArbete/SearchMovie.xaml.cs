@@ -91,9 +91,9 @@ namespace Store
             if (e.Key == Key.Enter)
             {
                 State.Movies.Clear();
-                State.Movies.AddRange(API.GetMovieByName(TextBox.Text));
+                State.Movies.AddRange(API.GetMovieByName(SearchMovieField.Text));
                 var next_searchMovie = new SearchMovie();
-                next_searchMovie.show();
+                next_searchMovie.Show();
                 this.Close();
 
                 if (State.Movies.Count == 0)
