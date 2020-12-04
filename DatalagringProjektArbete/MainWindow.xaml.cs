@@ -98,7 +98,7 @@ namespace Store
             //Försök att registrera en uthyrdning.
             if (API.RegisterSale(State.User, State.Pick))
             {
-                MessageBox.Show("Sale succeeded!", "Downloading your moive right now.", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Sale succeeded!", "Your movie is being downloaded.", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

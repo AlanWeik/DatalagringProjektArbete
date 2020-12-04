@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="820">
+        Title="Main" Height="450" Width="820" WindowStartupLocation="CenterScreen" Background="Black">
     <ScrollViewer>
-        <Grid Name="MovieGrid" Background="Black" ShowGridLines="True" Width="605">
+        <Grid Name="MovieGrid" Background="Black" ShowGridLines="False" Width="605">
 
             <Grid.ColumnDefinitions>
                 <!-- Tre rader där filmtexten kommer att dyka upp i MainWindow-->

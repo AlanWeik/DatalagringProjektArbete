@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataBaseConnection;
+
 
 namespace Store
 {
@@ -20,6 +22,25 @@ namespace Store
         public UserWindow()
         {
             InitializeComponent();
+
+            AccountInfoLabel.Content =
+                "Hi, " + State.User.Firstname + "!\nHere's what you've rented in the past: ";
+
+
+            int y = 0;
+            for (int i = 0; i < State.User.Sales.Count; i++)
+            {
+                Rental rental = State.User.Sales[i];
+
+                var rental1 = new Label() { };
+                rental1.Content = rental.Movie.Title;
+                rental1.HorizontalAlignment = HorizontalAlignment.Left;
+                rental1.VerticalAlignment = VerticalAlignment.Top;
+                rental1.Foreground = Brushes.White;
+                rental1.Margin = new Thickness(0, y, 0, 0);
+                Rentals.Children.Add(rental1);
+                y += 25;
+            }
         }
 
         private void ReturnClick(object sender, RoutedEventArgs e) // Return to MainWindow.
@@ -29,6 +50,13 @@ namespace Store
                 BackToMainWindow.Show();
                 this.Close();
             }
+            // ADD CHANGE USERNAME FUNCTIONALITY 
+            // ADD USER INFO FUNCTIONALITY 
+        }
+
+        private void Window_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+
         }
     }
 }

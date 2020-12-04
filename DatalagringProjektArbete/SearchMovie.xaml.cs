@@ -46,7 +46,7 @@ namespace Store
             }
         }
 
-        private void SearchField_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchMovieField_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

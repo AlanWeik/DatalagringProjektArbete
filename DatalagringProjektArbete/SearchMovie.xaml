@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="SearchMovie" Height="450" Width="800">
+        Title="Search Movies" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox Name="SearchMovieField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" TextChanged="SearchField_TextChanged"/>
+        <TextBox Name="SearchMovieField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="" TextChanged="SearchMovieField_TextChanged"/>
         <Button Click="SearchButton" Content="Search" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="70"/>
         <Button Click="BackButton" Content="Back" HorizontalAlignment="Center" Margin="0,265,0,0" VerticalAlignment="Top" Width="70"/>
 
