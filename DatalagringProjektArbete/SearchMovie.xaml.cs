@@ -135,16 +135,16 @@ namespace Store
             this.Close();
         }
 
-        private void SearchMovieField_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void BackButton(object sender, RoutedEventArgs e)
         {
             var BackToMain = new MainWindow();
             BackToMain.Show();
             this.Close();
+        }
+
+        private void SearchMovieField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

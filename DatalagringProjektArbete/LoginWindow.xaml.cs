@@ -39,7 +39,7 @@ namespace Store
                 }
                 else
                 {
-                    SearchUserField.Text = "...";
+                    MessageBox.Show("User not found, try 'Admin'. ");
                 }
             }
         }

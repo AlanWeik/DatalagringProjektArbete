@@ -32,6 +32,7 @@ namespace DataBaseConnection
                     new Customer { Username = "Stinski", Firstname = "Stina", Lastname = "Elvland", Age = 99, Email = "Stina@hotmail.com" },
                     new Customer { Username = "Alice", Firstname = "Alice", Lastname = "Eklund", Age = 32, Email = "Alice@hotmail.com" },
                     new Customer { Username = "Saga", Firstname = "Saga", Lastname = "Eklund", Age = 11, Email = "Saga@hotmail.com" },
+                    new Customer {Username = "Admin"},
 
                 });
 
