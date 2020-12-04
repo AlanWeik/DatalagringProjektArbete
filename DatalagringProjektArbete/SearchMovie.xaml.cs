@@ -24,65 +24,22 @@ namespace Store
         public SearchMovie()
         {
             InitializeComponent();
-
-            for (int y = 0; y < MovieGrid.RowDefinitions.Count; y++)
+            int y = 0;
+            for (int i = 0; i < State.Movies.Count; i++)
             {
-                for (int x = 0; x < MovieGrid.RowDefinitions.Count; x++)
-                {
-                    int i = y * MovieGrid.RowDefinitions.Count + x;
-                    if (i < State.Movies.Count)
-                    {
+                var movie = State.Movies[i];
 
-                        var movie = State.Movies[i];
-                        try
-                        {
-                            var text = new Label() { };
-                            text.Content = movie.Title;
-                            text.HorizontalAlignment = HorizontalAlignment.Center;
-                            text.VerticalAlignment = VerticalAlignment.Top;
-                            text.FontSize = 16;
-                            text.FontWeight = FontWeights.Bold;
-                            text.FontFamily = new FontFamily("sans-serif");
-                            text.Foreground = Brushes.Gray;
-
-                            var image = new Image() { };
-                            image.Cursor = Cursors.Hand;
-                            image.MouseUp += Image_MouseUp;
-                            image.HorizontalAlignment = HorizontalAlignment.Center;
-                            image.VerticalAlignment = VerticalAlignment.Center;
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            image.Height = 120;
-                            image.Margin = new Thickness(4, 4, 4, 4);
-
-                            var genre = new Label() { };
-                            genre.Content = movie.Genre;
-                            genre.HorizontalContentAlignment = HorizontalAlignment.Center;
-                            genre.VerticalAlignment = VerticalAlignment.Bottom;
-                            genre.Foreground = Brushes.MediumBlue;
-                            genre.Margin = new Thickness(15);
-
-                            MovieGrid.Children.Add(text);
-                            Grid.SetRow(text, y); // Y-led för text.
-                            Grid.SetColumn(text, x); // X-led för text.
-                            MovieGrid.Children.Add(image);
-                            Grid.SetRow(image, y); // Y-led för bild.
-                            Grid.SetColumn(image, x); // X-led för bild.
-                            MovieGrid.Children.Add(genre);
-                            Grid.SetRow(genre, y); // Y-led för genre.
-                            Grid.SetColumn(genre, x); // X-led för genre.
-                        }
-                        catch (Exception exeption) when // Felhantering med catch.
-                        (exeption is ArgumentException
-                          || exeption is ArgumentNullException
-                          || exeption is System.IO.FileNotFoundException
-                          )
-                        {
-                            continue; // Fortsätt köra programmet även om fel uppstår.
-                        }
-
-                    }
-                }
+                var movieone = new Label() { };
+                movieone.Content = movie.Title;
+                movieone.HorizontalAlignment = HorizontalAlignment.Left;
+                movieone.VerticalAlignment = VerticalAlignment.Top;
+                movieone.Foreground = Brushes.White;
+                movieone.Margin = new Thickness(0, y, 0, 0);
+                ScrollViewrMovies.Children.Add(movieone);
+                y += 25;
             }
+
+         
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
         }
         // Kan söka på filmerna ifrån film-yoghurten.
@@ -103,14 +60,14 @@ namespace Store
             }
         }
         // Vad som händer när man klickar på en filmikon i appen. AK BJÖRN
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        private void Label_MouseUp(object sender, MouseButtonEventArgs e)
         {
             //Ta reda på vilken kordinat den klickade bilden har.
             var x = Grid.GetColumn(sender as UIElement);
             var y = Grid.GetRow(sender as UIElement);
 
             //Används kordinaten för att ta reda på vilken motsvarande record det rör sig om.
-            int i = y * MovieGrid.ColumnDefinitions.Count + x;
+            int i = y * ScrollViewrMovies.ColumnDefinitions.Count + x;
             State.Pick = State.Movies[i];
 
             //Försök att registrera en uthyrdning.
