@@ -144,5 +144,15 @@ namespace Store
             MainWindow.Show();
             this.Close();
         }
+
+        private void SearchMovieField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void BackButton(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
