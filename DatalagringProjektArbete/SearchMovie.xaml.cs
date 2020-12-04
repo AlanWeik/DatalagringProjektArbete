@@ -85,19 +85,25 @@ namespace Store
             }
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
         }
+        // Kan söka på filmerna ifrån film-yoghurten.
         public void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
                 State.Movies.Clear();
-                State.Movies.AddRange(API.GetMovieByname(TextBox.Text));
+                State.Movies.AddRange(API.GetMovieByName(TextBox.Text));
                 var next_searchMovie = new SearchMovie();
                 next_searchMovie.show();
                 this.Close();
+
+                if (State.Movies.Count == 0)
+                {
+                    MessageBox.Show("No movie found", "please try again!", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
         }
 
-        // Vad som händer när man klickar på en filmikon i appen.
+        // Vad som händer när man klickar på en filmikon i appen. AK BJÖRN
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             //Ta reda på vilken kordinat den klickade bilden har.
@@ -117,22 +123,6 @@ namespace Store
             {
                 MessageBox.Show("Error occured while purchase was made.. Please try again later mate!", "Purchase failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-        }
-        private bool handle = true;
-        private void ComboBox_dropDownClosed(object sender, EventArgs e)
-        {
-            if (handle) Handle();
-            handle = true;
-        }
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ComboBox cmb = sender as ComboBox;
-            handle = !cmb.IsDropDownOpen;
-            handle();
-        }
-        private void Handle()
-        {
-
         }
         private void SearchClick(object sender, RoutedEventArgs e)
         {
