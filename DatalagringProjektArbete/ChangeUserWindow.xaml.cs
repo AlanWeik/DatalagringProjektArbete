@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
+using System.Data.SqlClient;
 
 namespace Store
 {
@@ -21,10 +23,19 @@ namespace Store
         {
             InitializeComponent();
         }
-
-        private void ChangeUserNameButton(object sender, RoutedEventArgs e)
+        private void ChangeUserNameButton(object sender, RoutedEventArgs e) // Byter användarnamnet 
         {
-            
+            if (OldUserName.Text == State.User.Username)
+            {
+                if (NewUserName.Text == NewUserName.Text)
+                {
+                    State.User.Username = NewUserName.Text;
+                    MessageBox.Show("Username has changed!", "Username changed!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    var BackToMainWindow = new MainWindow();                 
+                        BackToMainWindow.Show();
+                        this.Close();
+                }
+            }
         }
         private void BackToMainButton(object sender, RoutedEventArgs e)
         {

@@ -102,7 +102,6 @@ namespace Store
                 }
             }
         }
-
         // Vad som händer när man klickar på en filmikon i appen. AK BJÖRN
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -124,9 +123,20 @@ namespace Store
                 MessageBox.Show("Error occured while purchase was made.. Please try again later mate!", "Purchase failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
-        private void SearchClick(object sender, RoutedEventArgs e)
+        private void SearchClick(object sender, RoutedEventArgs e) // Så att man kan söka genom att "klicka" på Search-knappen.
         {
+            {
+                State.Movies.Clear();
+                State.Movies.AddRange(API.GetMovieByName(SearchMovieField.Text));
+                var next_searchMovie = new SearchMovie();
+                next_searchMovie.Show();
+                this.Close();
 
+                if (State.Movies.Count == 0)
+                {
+                    MessageBox.Show("No movie found", "please try again!", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
         }
         private void BackClick(object sender, RoutedEventArgs e)
         {

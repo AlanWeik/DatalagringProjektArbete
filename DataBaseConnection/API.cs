@@ -52,5 +52,9 @@ namespace DataBaseConnection
         {
             return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList(); // Någon lambda som jag aldrig lär mig hur fan det ens funkar? Men jämför med angiven textsträng med det som finns i Movie-listan.
         }
+        public static Customer GetCustomerUsername(string username)
+        {
+            return ctx.Customers.FirstOrDefault(ctx => username.ToLower() == username.ToLower());
+        }
     }
 }
