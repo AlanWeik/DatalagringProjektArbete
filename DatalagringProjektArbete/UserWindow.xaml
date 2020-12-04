@@ -8,8 +8,8 @@
         Title="MyProfile" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="Black">
     <Grid>
         <Label Name ="AccountInfoLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Height="98" Width="648" Foreground="White" FontSize="33" Margin="0,36,0,0"></Label>
-        <Button Click="ReturnClick" Content="Return" HorizontalAlignment="Left" Margin="412,354,0,0" VerticalAlignment="Top" Height="30" Width="70" RenderTransformOrigin="0.495,0.578"/>
-        <Button Click="ChangeUserName" Content="Change username" HorizontalAlignment="Left" Margin="296,354,0,0" VerticalAlignment="Top" Height="30" Width="104" RenderTransformOrigin="0.5,0.5"/>
+        <Button Click="ReturnClick" Content="Back" HorizontalAlignment="Left" Margin="412,354,0,0" VerticalAlignment="Top" Height="22" Width="70" RenderTransformOrigin="0.495,0.578" />
+        <Button Click="ChangeUserName" Content="Change username" HorizontalAlignment="Left" Margin="296,354,0,0" VerticalAlignment="Top" Height="22" Width="104" RenderTransformOrigin="0.5,0.5"/>
         <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Top" Width="648" Height="171" Foreground="White" FontSize="16" Margin="0,167,0,0">
             <Grid Name="Rentals"/>
         </ScrollViewer>

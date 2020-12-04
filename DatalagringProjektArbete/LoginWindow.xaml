@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="black">
     <Grid>
-        <Label Content="USERNAME" Height="40" FontSize="25" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="SearchUserField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
-        <Button Click="LogInClick" Content="Log In" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label Content="USERNAME" Height="40" FontSize="25" HorizontalAlignment="Center" Margin="0,154,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox Name="SearchUserField" HorizontalAlignment="Center" Margin="0,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+        <Button Click="LogInClick" Content="Log In" HorizontalAlignment="Center" VerticalAlignment="Top" Width="126" Margin="0,217,0,0"/>
     </Grid>
 </Window>

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="ChangeUserName" Height="450" Width="800" WindowStartupLocation="CenterScreen" Foreground="White" Background="Black">
     <Grid>
-        <Label Content="Old Username" HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" Width="212" Background="White"/>
-        <Label Content="New Username" HorizontalAlignment="Center" Margin="0,166,0,0" VerticalAlignment="Top" Width="212" Background="White" />
-        <Button Content="Change Username" Click="ChangeUserNameButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="294,201,0,0" Height="22" Width="141"/>
-        <Button Content="Back" Click="BackToMainButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Width="66" Margin="440,201,0,0"/>
+        <Label Content="Old Username" Width="212" Background="White" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,132,0,0"/>
+        <Label Content="New Username" Width="212" Background="White" VerticalAlignment="Top" Margin="0,166,0,0" HorizontalAlignment="Center" />
+        <Button Content="Change Username" Click="ChangeUserNameButton" Height="22" Width="141" VerticalAlignment="Top" Margin="294,201,0,0" HorizontalAlignment="Left"/>
+        <Button Content="Back" Click="BackToMainButton" Height="22" Width="66" VerticalAlignment="Top" Margin="440,201,0,0" HorizontalAlignment="Left"/>
     </Grid>
 </Window>
