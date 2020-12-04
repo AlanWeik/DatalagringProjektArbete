@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="ChangeUserName" Height="450" Width="800" WindowStartupLocation="CenterScreen" Foreground="White" Background="Black">
     <Grid>
-        <Label Content="Old Username" HorizontalAlignment="Left" Margin="308,138,0,0" VerticalAlignment="Top" Width="212" Foreground="White"/>
-        <Label Content="New Username" HorizontalAlignment="Left" Margin="308,166,0,0" VerticalAlignment="Top" Width="212" Foreground="White" />
-        <TextBox Name="OldUsername" Margin="400,168,243,244"/>
-        <TextBox Name="NewUserName" Margin="400,140,243,273"/>
-        <Button Content="Change" Click="ChangeUserNameButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,197,0,0" Height="22" Width="79"/>
-        <Button Content="Back" Click="BackToMainButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Width="73" Margin="484,197,0,0"/>
+        <Canvas Margin="276,177,275,176">
+            <Label Content="Old Username" Foreground="White" Height="25" Width="212"/>
+            <Label Content="New Username" Foreground="White" Height="25" Canvas.Top="28" Width="212" />
+            <Button Content="Change" Click="ChangeUserNameButton" Height="22" Canvas.Left="92" Canvas.Top="59" Width="79"/>
+            <Button Content="Back" Click="BackToMainButton" Height="22" Canvas.Left="176" Canvas.Top="59" Width="73"/>
+            <TextBox x:Name="NewUserName" Height="21" Canvas.Left="92" Canvas.Top="30" Width="157"/>
+            <TextBox x:Name="OldUserName" Height="22" Canvas.Left="92" Canvas.Top="3" Width="157"/>
+        </Canvas>
     </Grid>
 </Window>

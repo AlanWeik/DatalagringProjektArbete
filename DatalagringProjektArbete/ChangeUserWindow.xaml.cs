@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
-
+using DataBaseConnection;
 namespace Store
 {
     /// <summary>
@@ -30,6 +30,8 @@ namespace Store
                 if (NewUserName.Text == NewUserName.Text)
                 {
                     State.User.Username = NewUserName.Text;
+                    API.ctx.Customers.Update(State.User);
+                    API.ctx.SaveChanges();
                     MessageBox.Show("Username has changed!", "Username changed!", MessageBoxButton.OK, MessageBoxImage.Information);
                     var BackToMainWindow = new MainWindow();                 
                         BackToMainWindow.Show();
