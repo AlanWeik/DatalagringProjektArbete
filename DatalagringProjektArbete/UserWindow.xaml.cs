@@ -58,5 +58,12 @@ namespace Store
         {
 
         }
+
+        private void ChangeUserName(object sender, RoutedEventArgs e)
+        {
+            var ToChangeUserWindow = new ChangeUserWindow();
+            ToChangeUserWindow.Show();
+            this.Close();
+        }
     }
 }

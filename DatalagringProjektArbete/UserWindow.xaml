@@ -9,7 +9,7 @@
     <Grid>
         <Label Name ="AccountInfoLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Height="98" Width="648" Foreground="White" FontSize="33" Margin="0,36,0,0"></Label>
         <Button Click="ReturnClick" Content="Return" HorizontalAlignment="Center" Margin="0,355,0,0" VerticalAlignment="Top" Height="30" Width="70" RenderTransformOrigin="0.495,0.578"/>
-
+        <Button Click="ChangeUserName" Content="Change username" HorizontalAlignment="Left" Margin="189,355,0,0" VerticalAlignment="Top" Height="30" Width="148" RenderTransformOrigin="0.5,0.5"/>
         <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Top" Width="648" Height="171" Foreground="White" FontSize="16" Margin="0,167,0,0">
             <Grid Name="Rentals"/>
         </ScrollViewer>
