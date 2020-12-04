@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MyProfile" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="Black">
     <Grid>
-        <Label Name ="AccountInfoLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Height="91" Width="647" Foreground="White" FontSize="33" Margin="0,36,0,0"></Label>
+        <Label Name ="AccountInfoLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Height="98" Width="648" Foreground="White" FontSize="33" Margin="0,36,0,0"></Label>
         <Button Click="ReturnClick" Content="Return" HorizontalAlignment="Center" Margin="0,355,0,0" VerticalAlignment="Top" Height="30" Width="70" RenderTransformOrigin="0.495,0.578"/>
 
-        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Top" Width="647" Height="180" Foreground="White" FontSize="16" Margin="0,147,0,0">
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Top" Width="648" Height="171" Foreground="White" FontSize="16" Margin="0,167,0,0">
             <Grid Name="Rentals"/>
         </ScrollViewer>
     </Grid>
