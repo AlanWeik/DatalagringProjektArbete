@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="Main" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="Black">
+
     <ScrollViewer>
         <Grid Name="MovieGrid" HorizontalAlignment="Center" Background="Black" ShowGridLines="False" Width="605">
 
@@ -28,9 +29,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Margin="-84,4,0,0"/>
-            <Button Click="LoggOuteClick" Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28" Margin="-84,81,0,0"/>
-            <Button Click="BrowsMovie" Content="Search Movie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-84,42,0,0" RenderTransformOrigin="0.887,-1.015" Width="81" Height="28"/>
+            <Button Click="profileClick" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="22" Margin="-84,4,0,0"/>
+            <Button Click="LoggOuteClick" Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.887,-1.015" Width="81" Height="22" Margin="-84,58,0,0"/>
+            <Button Click="BrowsMovie" Content="Search Movie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-84,31,0,0" RenderTransformOrigin="0.887,-1.015" Width="81" Height="22"/>
 
 
         </Grid>
