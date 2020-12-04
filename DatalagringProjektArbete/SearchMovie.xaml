@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="Search Movies" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid name ="MovieGrid">
         <TextBox Name="SearchMovieField" HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="" TextChanged="SearchMovieField_TextChanged"/>
         <Button Click="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="111,327,0,0" VerticalAlignment="Top" Width="70"/>
         <Button Click="BackButton" Content="Back" HorizontalAlignment="Left" Margin="111,352,0,0" VerticalAlignment="Top" Width="70"/>

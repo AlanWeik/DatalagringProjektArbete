@@ -48,5 +48,9 @@ namespace DataBaseConnection
                 return false;
             }
         }
+        public static List<Movie> GetMovieByName(string title)
+        {
+            return ctx.Movies.AsAsyncEnumerable().Where(m => m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }
