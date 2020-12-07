@@ -30,31 +30,31 @@ namespace Store
         {
             if (e.Key == Key.Enter)
             {
-                State.User = API.GetCustomerByName(SearchUserField.Text.Trim());
+                State.User = API.GetCustomerByName(SearchUserField.Text.Trim()); // Hämtar användarnamet ifrån tabels.
                 if (State.User != null)
                 {
-                    var next_window = new MainWindow();
+                    var next_window = new MainWindow(); // Går vidare till nästa fönster i programmet vid tangenttryck om stavning är rätt.
                     next_window.Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("User not found, try 'Admin'. ");
+                    MessageBox.Show("User not found, try 'Admin'. "); // meddelande skrivs ut ifall att användarnamnet är felskrivet.
                 }
             }
         }
         private void LogInClick(object sender, RoutedEventArgs e)
         {
-            State.User = API.GetCustomerByName(SearchUserField.Text.Trim());
+            State.User = API.GetCustomerByName(SearchUserField.Text.Trim()); // Om user inte är likamed noll så stäng ner fönster.
             if (State.User != null)
             {
-                var next_window = new MainWindow();
+                var next_window = new MainWindow(); // Går vidare till nästa fönster i programmet vid loggin vid rätt staving vid klick med musen.
                 next_window.Show();
                 this.Close();
             }
             else
             {
-                SearchUserField.Text = "...";
+                SearchUserField.Text = "..."; // Annars skriv ut "..." på skärmen.
             }
         }
 

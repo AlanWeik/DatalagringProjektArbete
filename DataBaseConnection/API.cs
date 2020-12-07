@@ -7,13 +7,13 @@ namespace DataBaseConnection
 {
     public static class API
     {
-        public static Context ctx; // Public så att vi kan koppla API till dess fönster vi skapar.
+        public static Context ctx; // Public så att vi får tillgång till API:ER i dom andra kodfönsterna.
 
         static API() // Här inne skriver vi våra queries och bestämmer lite vad som ska visas och hända ifrån SQL-servern genom datorbasen i våra tables.
         {
             ctx = new Context();
         }
-        public static List<Movie>GetMovieSlice(int skip_x, int take_x) // Lista för movie. 
+        public static List<Movie>GetMovieSlice(int skip_x, int take_x) 
         {
             return ctx.Movies
                 .OrderBy(m => m.Title)
@@ -25,23 +25,22 @@ namespace DataBaseConnection
         {
             return ctx.Customers
                 .FirstOrDefault(c => c.Username.ToLower() == name.ToLower());
-            // Snacka om att använda username istället för Fname och Lname. 
         }
 
         public static Movie SearchMovie(string Title)
         {
             return ctx.Movies
-               .FirstOrDefault(c => c.Title.ToLower() == Title.ToLower()); // Lambda-uttryck för bokstavskombination så att programmet inte krashar vid inlogg.
+               .FirstOrDefault(c => c.Title.ToLower() == Title.ToLower());
         }
-        public static bool RegisterSale(Customer customer, Movie movie) // Sale för rental. 
+        public static bool RegisterSale(Customer customer, Movie movie) 
         {
             try
             {
-                ctx.Add(new Rental() { Date = DateTime.Now, Customer = customer, Movie = movie }); // Adderar ett nytt köp/hyrd film
+                ctx.Add(new Rental() { Date = DateTime.Now, Customer = customer, Movie = movie });
                 bool one_record_added = ctx.SaveChanges() == 1;
-                return one_record_added; // Returnerar köpet.
+                return one_record_added;
             }
-            catch(DbUpdateException e) // Vid fel..
+            catch(DbUpdateException e)
             {
                 System.Diagnostics.Debug.WriteLine(e.Message);
                 System.Diagnostics.Debug.WriteLine(e.InnerException.Message);
@@ -50,7 +49,7 @@ namespace DataBaseConnection
         }
         public static List<Movie> GetMovieByName(string title)
         {
-            return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList(); // Någon lambda som jag aldrig lär mig hur fan det ens funkar? Men jämför med angiven textsträng med det som finns i Movie-listan.
+            return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
         }
     }
 }
