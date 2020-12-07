@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataBaseConnection
 {
-    public class Customer 
+    public class Customer  //Här inne skapar vi tables med vad dom ska ha hålla för värden. 
     {
         public int Id { get; set; }
         public string Username { get; set; }

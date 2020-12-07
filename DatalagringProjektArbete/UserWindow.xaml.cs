@@ -59,7 +59,7 @@ namespace Store
 
         }
 
-        private void ChangeUserName(object sender, RoutedEventArgs e)
+        private void ChangeUserName(object sender, RoutedEventArgs e) // Knappens funktion
         {
             var ToChangeUserWindow = new ChangeUserWindow();
             ToChangeUserWindow.Show();

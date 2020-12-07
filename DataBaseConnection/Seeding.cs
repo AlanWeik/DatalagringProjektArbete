@@ -16,6 +16,7 @@ namespace DataBaseConnection
                 ctx.RemoveRange(ctx.Sales);
                 ctx.RemoveRange(ctx.Movies);
 
+                //Lista med kunder som vi lagt till.
 
                 ctx.AddRange(new List<Customer> {
                     new Customer { Username = "Alanski", Firstname = "Alan", Lastname = "Weik", Age = 12, Email = "AlanWeik@gmail.com" },

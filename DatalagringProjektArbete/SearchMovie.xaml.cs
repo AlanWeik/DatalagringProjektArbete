@@ -95,21 +95,21 @@ namespace Store
                 }
             }
         }
-        private void BackClick(object sender, RoutedEventArgs e)
+        private void BackClick(object sender, RoutedEventArgs e) // Knappens funktion
         {
             var MainWindow = new LoginWindow();
             MainWindow.Show();
             this.Close();
         }
 
-        private void BackButton(object sender, RoutedEventArgs e)
+        private void BackButton(object sender, RoutedEventArgs e) // Knappens funktion
         {
             var BackToMain = new MainWindow();
             BackToMain.Show();
             this.Close();
         }
 
-        private void SearchMovieField_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchMovieField_TextChanged(object sender, TextChangedEventArgs e) // Knappens funktion
         {
 
         }

@@ -106,14 +106,14 @@ namespace Store
             }
         }
 
-        private void LoggOuteClick(object sender, RoutedEventArgs e)
+        private void LoggOuteClick(object sender, RoutedEventArgs e) // Knappens funktion
         {
             var loginwindow = new LoginWindow();
             loginwindow.Show();
             this.Close();
         }
 
-        private void profileClick(object sender, RoutedEventArgs e)
+        private void profileClick(object sender, RoutedEventArgs e) // Knappens funktion
         {
             var ToProfile = new UserWindow();
             {
@@ -122,7 +122,7 @@ namespace Store
             }
         }
 
-        private void BrowsMovie(object sender, RoutedEventArgs e)
+        private void BrowsMovie(object sender, RoutedEventArgs e) // Knappens funktion
         {
             var OpenSearchWindow = new SearchMovie();
             {
