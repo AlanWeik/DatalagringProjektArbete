@@ -41,42 +41,18 @@ namespace DataBaseConnection
                 var lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
                 for (int i = 0; i < 200; i++)
                 {
-                    var cells = lines[i].Split(',');
+                    var cells = lines[i].Split(','); // Splittar en stäng och sperarerar celler.
 
                     var url = cells[5].Trim('"');
 
-                    try{ var test = new Uri(url); }
-                    catch (Exception) { continue; }
+                    try{ var test = new Uri(url); } // Testar att initiera en ny instans av URI klassen.
+                    catch (Exception) { continue; } // Fångar vid fel.
 
-                    movies.Add(new Movie { Title = cells[2], ImageURL = url });
+                    movies.Add(new Movie { Title = cells[2], ImageURL = url }); // Skriver ut bilder på filmer på skrämen. 
                 }
                 ctx.AddRange(movies);
 
                 ctx.SaveChanges();
-            }
-
-            using (var ctx = new Context()) //Skapar table för Movie tabellen
-            {
-                ctx.RemoveRange(ctx.Customers);
-                ctx.RemoveRange(ctx.Sales);
-                ctx.RemoveRange(ctx.Movies);
-
-                ctx.AddRange(new List<Movie> {
-                    new Movie {Title = "abc" , Genre = "hej", ImageURL = "bildfitta"}
-         
-                });
-            }
-
-            using (var ctx = new Context()) //Skapar table för rental tabellen
-            {
-                ctx.RemoveRange(ctx.Customers);
-                ctx.RemoveRange(ctx.Sales);
-                ctx.RemoveRange(ctx.Movies);
-
-                ctx.AddRange(new List<Rental> {
-                    new Rental {Date = DateTime.Now}
-
-                });
             }
         }
     }

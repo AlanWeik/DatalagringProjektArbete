@@ -23,18 +23,18 @@ namespace Store
         {
             InitializeComponent();
 
-            AccountInfoLabel.Content =
+            AccountInfoLabel.Content = //Skriver ut ett meddelande när man går in på sin profil och kan se vad det är man har hyrt för filmer. 
                 "Hi, " + State.User.Firstname + "!\nHere's what you've rented in the past: ";
 
 
             int y = 0;
-            for (int i = 0; i < State.User.Sales.Count; i++)
+            for (int i = 0; i < State.User.Sales.Count; i++) // För varje varv så öka hyrda filmer som har hyrts. 
             {
                 Rental rental = State.User.Sales[i];
 
-                var rental1 = new Label() { };
+                var rental1 = new Label() { }; 
                 rental1.Content = rental.Movie.Title;
-                rental1.HorizontalAlignment = HorizontalAlignment.Left;
+                rental1.HorizontalAlignment = HorizontalAlignment.Left; //Lite designe.
                 rental1.VerticalAlignment = VerticalAlignment.Top;
                 rental1.Foreground = Brushes.White;
                 rental1.Margin = new Thickness(0, y, 0, 0);
@@ -45,13 +45,11 @@ namespace Store
 
         private void ReturnClick(object sender, RoutedEventArgs e) // Return to MainWindow.
         {
-            var BackToMainWindow = new MainWindow();
+            var BackToMainWindow = new MainWindow(); // Vid tryck på Return-knappen så tas man tillbaka till föregående fönster i programmet. 
             {
-                BackToMainWindow.Show();
+                BackToMainWindow.Show(); 
                 this.Close();
             }
-            // ADD CHANGE USERNAME FUNCTIONALITY 
-            // ADD USER INFO FUNCTIONALITY 
         }
 
         private void Window_ContextMenuOpening(object sender, ContextMenuEventArgs e)
@@ -61,7 +59,7 @@ namespace Store
 
         private void ChangeUserName(object sender, RoutedEventArgs e) // Knappens funktion
         {
-            var ToChangeUserWindow = new ChangeUserWindow();
+            var ToChangeUserWindow = new ChangeUserWindow(); // Vid tryck på change user name-knappen så tas man till ett nytt fönster där man kan byta användarnamn. 
             ToChangeUserWindow.Show();
             this.Close();
         }

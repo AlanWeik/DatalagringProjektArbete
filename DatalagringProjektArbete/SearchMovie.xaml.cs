@@ -42,10 +42,9 @@ namespace Store
          
             this.KeyDown += new KeyEventHandler(MainWindow_KeyDown);
         }
-        // Kan söka på filmerna ifrån film-yoghurten.
         public void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            if (e.Key == Key.Enter) // Om knapptryck är lika med ENTER
             {
                 State.Movies.Clear();
                 State.Movies.AddRange(API.GetMovieByName(SearchMovieField.Text));
@@ -53,7 +52,7 @@ namespace Store
                 next_searchMovie.Show();
                 this.Close();
 
-                if (State.Movies.Count == 0)
+                if (State.Movies.Count == 0) // Om sökvärdet är lika med 0 eller blankt så skriv ut meddelandet.
                 {
                     MessageBox.Show("No movie found", "please try again!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -80,7 +79,7 @@ namespace Store
                 MessageBox.Show("Error occured while purchase was made.. Please try again later mate!", "Purchase failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
-        private void SearchClick(object sender, RoutedEventArgs e) // Så att man kan söka genom att "klicka" på Search-knappen.
+        private void SearchClick(object sender, RoutedEventArgs e) // Söker efter filmerna genom state.movies samt API och skriver ut filmtext i search-bar.
         {
             {
                 State.Movies.Clear();
@@ -89,7 +88,7 @@ namespace Store
                 next_searchMovie.Show();
                 this.Close();
 
-                if (State.Movies.Count == 0)
+                if (State.Movies.Count == 0) // Om värdet är lika med 0 eller är blankt så skriv ut felmeddelande.
                 {
                     MessageBox.Show("No movie found", "please try again!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -97,14 +96,14 @@ namespace Store
         }
         private void BackClick(object sender, RoutedEventArgs e) // Knappens funktion
         {
-            var MainWindow = new LoginWindow();
+            var MainWindow = new LoginWindow(); // Vid klick på back-knappen så tas man tillbaka till föregående fönster som är MainWindow.
             MainWindow.Show();
             this.Close();
         }
 
         private void BackButton(object sender, RoutedEventArgs e) // Knappens funktion
         {
-            var BackToMain = new MainWindow();
+            var BackToMain = new MainWindow(); // Vid backbutton-klick på knappen så tas man tillbakatill Main-fönstret. 
             BackToMain.Show();
             this.Close();
         }

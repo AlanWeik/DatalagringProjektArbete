@@ -9,7 +9,7 @@ namespace DataBaseConnection
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Rental> Sales { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // Search-path för däär filen ligger med olika filmer och information angående filmerna.
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // Search-path för där filen ligger med olika filmer och information angående filmerna.
         {
             optionsBuilder
                 .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
@@ -22,7 +22,7 @@ namespace DataBaseConnection
                 );
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) // Test/ändrig för tables innehåll.
+        protected override void OnModelCreating(ModelBuilder modelBuilder) //Kan vi ändra i datorbasen vid test. 
         {
             modelBuilder.Entity<Customer>().HasData(new Customer
             {

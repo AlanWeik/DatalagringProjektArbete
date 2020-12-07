@@ -27,7 +27,7 @@ namespace Store
 
             int movie_skip_count = 0;
             int movie_take_count = 400; //Visar antalet filmer
-            State.Movies = API.GetMovieSlice(movie_skip_count, movie_take_count);
+            State.Movies = API.GetMovieSlice(movie_skip_count, movie_take_count); // Hämtar filmerna i från filen.
 
             int column_count = MovieGrid.ColumnDefinitions.Count;
             int row_count = (int)Math.Ceiling((double)State.Movies.Count / (double)column_count);
@@ -50,7 +50,7 @@ namespace Store
                         //Hämtaett film record
                         var movie = State.Movies[i];
 
-                        //Försök att skapa en imgae Controller(legobit) och
+                        //Försök att skapa en image Controller(legobit) och
                         // Placera den i rätt Grid cell enl. x,y kordinaterna
                         //Skapa en image som visar filmomslaget
                         var image = new Image()
@@ -62,11 +62,11 @@ namespace Store
                         };
                         image.MouseUp += Image_MouseUp;
 
-                        try
+                        try //Testa källan.
                         {
                             image.Source = new BitmapImage(new Uri(movie.ImageURL)); // Hämtar bildlänken till ram
                         }
-                        catch (Exception e) when
+                        catch (Exception e) when // Fångar fel om det uppstår.
                         (e is ArgumentException || e is System.IO.FileNotFoundException || e is UriFormatException)
                         {
                             // Om något går fel så lägger vi in en placeholder.
@@ -108,14 +108,14 @@ namespace Store
 
         private void LoggOuteClick(object sender, RoutedEventArgs e) // Knappens funktion
         {
-            var loginwindow = new LoginWindow();
+            var loginwindow = new LoginWindow(); // Stänger fönstret vid utloggning och tar en till inloggningsfönstret.
             loginwindow.Show();
             this.Close();
         }
 
         private void profileClick(object sender, RoutedEventArgs e) // Knappens funktion
         {
-            var ToProfile = new UserWindow();
+            var ToProfile = new UserWindow(); //Vid klick på profil-knappen så tas man till nästa fönster.
             {
                 ToProfile.Show();
                 this.Close();
